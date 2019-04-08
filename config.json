@@ -1,0 +1,19 @@
+{
+	"font": [
+		"bower_components/mdi/fonts/*",
+		"bower_components/font-awesome/webfonts/*",
+		"bower_components/linearicons/dist/web-font/fonts/*"
+	],
+	"globalJs": [
+		"bower_components/swiper/dist/js/swiper.min.js",
+		"bower_components/jquery/dist/jquery.min.js",
+		"src/plugins/lazysizes.min.js",
+		"src/plugins/mapping.js",
+		"src/plugins/mapping-listener.js"
+	],
+	"globalCss": [
+		"src/plugins/grid.css",
+		"src/plugins/font.css",
+		"bower_components/swiper/dist/css/swiper.min.css"
+	]
+}
