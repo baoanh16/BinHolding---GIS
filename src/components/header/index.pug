@@ -1,2 +1,61 @@
 header
-	h2 This is header
+	.container
+		.row.no-gutters
+			.menu-mobile-toggler
+				span.mdi.mdi-menu
+			.logo
+				a(href="/")
+					img(src="./img/logo_1.png", alt="")
+			.navbar
+				.navbar-top
+					.navbar-top-list
+						a(href="#") Gov news
+						a(href="#") GIS news
+						a(href="#") GIS event
+						a(href="#") 
+							span.mdi.mdi-account
+							span Login/Register
+					.search
+						input#search(type="text", name="search", placeholder="Search...")
+						button 
+							span.mdi.mdi-magnify
+					.language
+						.current
+							img(src="./img/en-UK.jpg", alt="")
+							| EN
+							span.lnr.lnr-chevron-down
+						.dropdown
+							a(href="#")
+								img(src="./img/en-UK.jpg", alt="")
+								span EN
+							a(href="#")
+								img(src="./img/vi-VN.jpg", alt="")
+								span VI
+						
+					.currency
+						select#currency(name="currency")
+							option(value="") USD - $
+							option(value="") USD - $
+							option(value="") USD - $
+							option(value="") USD - $
+				.navbar-bottom
+					ul.navbar-bottom-list
+						li
+							a(href="/") Home
+						li
+							a(href="/") residence
+						li
+							a(href="/") citizenship
+						li
+							a(href="/") working visa
+						li.active
+							a(href="/") gis tools
+						li
+							a(href="/") faqs
+						li
+							a(href="/") contact us
+					.navbar-button
+						a(href="#")
+							span.fab.fa-telegram-plane
+							span Apply Now
+		#mobile-menu

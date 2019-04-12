@@ -3,7 +3,7 @@
 	"version": "3.2.2",
 	"description": "source build html",
 	"main": "gulpfile.js",
-	"repository": "https://github.com/sonvh2510/01.ToolBuildHTML.git",
+	"repository": "https://github.com/sonvh2510/BinHolding---GIS.git",
 	"private": false,
 	"author": "sonvh2510",
 	"license": "MIT",

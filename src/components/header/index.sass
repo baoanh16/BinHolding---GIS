@@ -1,2 +1,322 @@
 header
-	color: green
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 10
+	background: white
+	box-shadow: 0 0 8px rgba(0,0,0,.15)
+	.row.no-gutters
+		height: 100px
+		align-items: center
+	.logo
+		flex: 0 0 auto
+		width: auto
+		max-width: 100%
+		img
+			max-height: 70px
+	.navbar
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+	.navbar-top
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		margin-bottom: 14px
+	.navbar-bottom
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	.navbar-top-list
+		display: flex
+		align-items: flex-start
+		a
+			white-space: nowrap
+			padding: 0 12px
+			font-size: 13px
+			color: darken(white,40%)
+			position: relative
+			+ a
+				&:before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					height: 12px
+					width: 1px
+					background: darken(white,40%)
+	.navbar-bottom-list
+		list-style-type: none
+		display: flex
+		align-items: center
+		padding-left: 0
+		a
+			font-size: 15px
+			text-transform: uppercase
+			color: lighten(black, 40%)
+			padding: 0 17px
+			display: flex
+			align-items: center
+			white-space: nowrap
+			&:hover
+				color: map-get($mau, main)
+				transition: all .3s ease-out
+				text-decoration: none
+		li:first-child
+			a
+				color: map-get($mau, main)
+				font-size: 0
+				&:before
+					line-height: 22px
+					content: '\f2dc'
+					font-family: 'Material Design Icons'
+					font-size: 20px
+	.navbar-button
+		a
+			width: 125px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 4px
+			background: map-get($mau, vang-2)
+			height: 30px
+			font-size: 12px
+			text-transform: uppercase
+			color: lighten(black,20%)
+			font-weight: 700
+			.fab
+				font-size: 16px
+				margin-right: 5px
+			&:hover
+				text-decoration: none
+	.search
+		max-width: 235px
+		height: 30px
+		position: relative
+		input, button
+			height: 100%
+			&:focus
+				outline: none
+		input
+			border: 1px solid darken(white,40%)
+			border-radius: 4px
+			padding: 0 45px 0 15px
+			width: 100%
+			font-size: 12px
+			font-style: italic
+			color: darken(white,40%)
+
+		button
+			background: map-get($mau, main)
+			border: 0
+			border-top-right-radius: 4px
+			border-bottom-right-radius: 4px
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 32px
+			top: 0
+			right: 0
+			color: white
+	.language
+		position: relative
+		margin-left: 8px
+		img
+			max-width: 25px
+		.current
+			height: 30px
+			border-radius: 4px
+			border: 1px solid darken(white,40%)
+			padding: 5px 10px
+			display: flex
+			justify-content: center
+			align-items: center
+			cursor: pointer
+			font-size: 14px
+			color: darken(white,40%)
+			img
+				margin-right: 5px
+			.lnr
+				margin-left: 10px
+		.dropdown
+			position: absolute
+			z-index: 2
+			background: white
+			width: 100%
+			top: 100%
+			left: 0
+			border-radius: 4px
+			display: none
+			border: 1px solid darken(white,40%)
+			a
+				padding: 5px 10px
+				display: flex
+				font-size: 14px
+				color: darken(white,40%)
+				justify-content: center
+				align-items: center
+				&:hover
+					background: map-get($mau, main)
+					color: white
+					text-decoration: none
+				span
+					margin-left: 6px
+					flex: 0 0 20px
+	.currency
+		margin-left: 8px
+		select
+			border: 0
+			font-size: 14px
+			height: 30px
+			appearance: none
+			background-image: url('../img/chevron_down.png')
+			background-size: 25px
+			background-position: 53px
+			background-repeat: no-repeat
+			padding-right: 25px
+			option
+				border: 1px solid rgba(0,0,0,.2)
+			&:focus
+				outline: none
+	.menu-mobile-toggler
+		display: none
+	@media (max-width: 1199.9px)
+		.logo
+			img
+				max-height: 50px
+		.search
+			max-width: 170px
+		.navbar-top-list
+			a
+				font-size: 11px
+		.navbar-bottom-list
+			a
+				font-size: 12px
+				padding: 0 10px
+	@media (max-width: 1024px)
+		.logo
+			margin-left: auto
+			img
+				max-height: 35px
+		.row.no-gutters
+			align-items: center
+			height: 50px
+		.menu-mobile-toggler
+			background: rgb(253,211,37)
+			background: linear-gradient(45deg, rgba(253,211,37,1) 0%, rgba(255,135,0,1) 100%)
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 23px
+			width: 23px
+			font-size: 18px
+			border-radius: 3px
+		.navbar
+			flex-grow: 0
+		.navbar-top
+			margin-bottom: 0
+		.container
+			position: relative
+		.language
+			.current
+				height: 20px
+				font-size: 11px
+				padding: 4px
+				.lnr
+					margin-left: 4px
+				img
+					max-width: 20px
+			.dropdown
+				a
+					padding: 5px 4px
+					font-size: 11px
+		.currency 
+			margin-left: 5px
+			select
+				font-size: 11px
+				height: 15px
+				font-size: 11px
+				background-size: 20px
+				background-position: 45px
+		#mobile-menu
+			position: fixed
+			padding-top: 15px
+			padding-right: 10px
+			padding-left: 10px
+			padding-bottom: 28px
+			z-index: 3
+			top: 50px
+			right: 100%
+			background: rgba(0,0,0,.8)
+			width: 100%
+			transition: all .3s ease-out
+			opacity: 0
+			&.show
+				right: 0
+				opacity: 1
+		.navbar-top-list
+			padding-bottom: 10px
+			a:first-child
+				padding-left: 0
+			a:last-child
+				.mdi
+					margin-right: 5px
+		.search
+			max-width: 205px
+			margin-bottom: 20px
+		.navbar-bottom
+			justify-content: flex-start
+			flex-direction: column
+			align-items: flex-start
+		.navbar-bottom-list
+			flex-direction: column
+			align-items: flex-start
+			margin-bottom: 20px
+			width: 100%
+			li
+				position: relative
+				width: 100%
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					height: 0.5px
+					width: 100%
+					background: rgb(253,211,37)
+					background: linear-gradient(90deg, rgba(253,211,37,0) 0%, rgba(255,159,57,.4) 50%, rgba(253,211,37,0) 100%)
+				a
+					padding: 6px 15px
+					color: white
+					&:after
+						margin-left: auto
+						content: '\e876'
+						font-family: 'Linearicons-Free'
+						font-size: 10px
+						color: white
+				&.active
+					a
+						background: #ce710d
+				&:last-child
+					&:after
+						position: absolute
+						top: 100%
+						left: 0
+						content: ''
+						height: 0.5px
+						width: 100%
+						background: rgb(253,211,37)
+						background: linear-gradient(90deg, rgba(253,211,37,0) 0%, rgba(255,159,57,.4) 50%, rgba(253,211,37,0) 100%)
+				&:first-child
+					a
+						color: white
+						font-size: 12px
+						&:before
+							content: none
+		.navbar-button
+			display: flex
+			justify-content: center
+			width: 100%

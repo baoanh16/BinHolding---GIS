@@ -1,0 +1,16 @@
+extends _layout.pug
+
+block var
+	- var title = 'Promotion'
+	- var bodyClass = 'promotion-page'
+	- var breadcrumb = ['Home', 'Promotion']
+block main
+	.page-banner
+		.breadcrumb-wrapper
+			.container
+				ul
+					each item in breadcrumb
+						li
+							a(href="#")= item
+	include ../components/promotion/p-1.pug
+	include ../components/have-tea-together/h-1.pug

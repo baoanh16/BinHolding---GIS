@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block var
+	- var title = 'Passport Index'
+	- var bodyClass = 'passport-index-page'
+	- var list = [{"title": "Program Match","content": "Find the program that best matches your goals","img": "./img/tools/match.png","link": "p-match.html"},{"title": "Passport Index","content": "Discover how the industry benchmark ranks the different programs. ","img": "./img/tools/index.png","link": "p-index.html"},{"title": "Make Payment","content": "Our exclusive calculator will convey the estimated costs for each program","img": "./img/tools/payment.png","link": "payment-1.html"}]
+	- var breadcrumb = ['Home','Gis Tool','Passport Index']
+block main
+	.page-banner
+		.breadcrumb-wrapper
+			.container
+				ul
+					each item in breadcrumb
+						li
+							a(href="#")= item
+	include ../components/tools/index.pug
+	include ../components/tools/tools-nav.pug
+	+toolsNav(list)

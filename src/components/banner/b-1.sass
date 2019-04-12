@@ -1,0 +1,66 @@
+.home-banner
+	.swiper-pagination
+		span
+			background: #ffe9cc
+			&.swiper-pagination-bullet-active
+				background: map-get($mau, vang-2)
+		bottom: 210px
+		@media (max-width: 1600px)
+			bottom: 185px
+		@media (max-width: 1440px)
+			bottom: 160px
+		@media (max-width: 1200px)
+			bottom: 135px
+		@media (max-width: 1024px)
+			bottom: 10px
+	.swiper-slide
+		position: relative
+		a
+			text-decoration: none
+		.caption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			align-items: center
+		.textbox
+			width: 510px
+			padding: 30px 28px
+			background: rgba(232, 132, 0,.7)
+			@media (min-width: 1025px)
+				opacity: 0
+				transform: translateY(20px)
+				transition: all .6s ease-out
+				&.active
+					opacity: 1
+					transform: translateY(0)
+			p
+				font-size: 24px
+				font-weight: 600
+				color: white
+				text-transform: uppercase
+		@media (max-width: 1199.9px)
+			.textbox
+				width: 80%
+		@media (max-width: 1024px)
+			a
+				display: block
+				img
+					object-fit: cover
+			.caption
+				position: unset
+			.container
+				max-width: 100%
+				padding: 0
+			.textbox
+				width: 100%
+				padding: 16px 16px 24px 16px
+				background: map-get($mau, main)
+				p
+					font-size: 18px
+		@media (max-width: 767.9px)
+			a
+				img
+					height: 310px

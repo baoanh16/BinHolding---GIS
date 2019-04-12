@@ -1,0 +1,78 @@
+.about-3
+	background-image: url('../img/about/bg_1.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding-bottom: 75px
+	@media (max-width: 1024px)
+		padding-bottom: 45px
+	.main-title
+		text-align: center
+	.imgbox
+		height: 100%
+		display: flex
+		align-items: center
+		img
+			width: 100%
+		@media (max-width: 1024px)
+			margin-bottom: 15px
+	.textbox
+		h4
+			font-size: 20px
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 14px
+		h5
+			font-size: 16px
+			font-weight: 600
+		p,li
+			font-size: 14px
+		li
+			&:before
+				font-size: 55px
+				content: "."
+				line-height: 0
+				margin-right: 5px
+				color: #aaaaaa
+		&:last-child
+			margin-top: 16px
+	.bottom-textbox
+		text-align: center
+		margin-top: 24px
+		margin-bottom: 28px
+.sub-about-3
+	.sub-title
+		font-size: 20px
+		font-weight: 600
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 32px
+	.item
+		flex: 0 0 20%
+		max-width: 20%
+		padding: 0 10px
+		.img
+			text-align: center
+			margin-bottom: 18px
+		h5
+			font-size: 16px
+			margin-bottom: 12px
+		@media (max-width: 1024px)
+			margin-bottom: 30px
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+			&:nth-child(4), &:nth-child(5)
+				flex: 0 0 50%
+				max-width: 50%
+		@media (max-width: 767.9px)
+			display: flex
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				flex: 0 0 100%
+				max-width: 100%
+			&:nth-child(4), &:nth-child(5)
+				flex: 0 0 100%
+				max-width: 100%
+			.img
+				flex: 0 0 90px
+				max-width: 90px

@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'Promotion'
+	- var bodyClass = 'promotion-page'
+	- var breadcrumb = ['Home', 'Residence','Bulgaria','Promotion']
+	- var link = 2 /*.jpg*/
+block main
+	include ../components/banner/b-2.pug
+	include ../components/navigation/n-2.pug
+	include ../components/promotion/p-2.pug
+	include ../components/have-tea-together/h-1.pug

@@ -1,0 +1,53 @@
+.home-7
+	background: #fef8ea
+	padding: 30px 0
+	.textbox
+		font-size: 20px
+		font-weight: 500
+		color: lighten(black, 20%)
+		@media (max-width: 1199.9px)
+			text-align: center
+		@media (max-width: 575.9px)
+			font-size: 16px
+			line-height: 1.3
+	.button-wrap
+		display: flex
+		justify-content: center
+		@media (max-width: 1199.9px)
+			margin-top: 16px
+	.btn-send
+		display: inline-flex
+		align-items: center
+		height: 50px
+		border-radius: 10px
+		background: map-get($mau, main)
+		color: white
+		font-size: 16px
+		padding: 0 24px
+		text-decoration: none
+		.fab
+			font-size: 24px
+			margin-right: 12px
+	.btn-download
+		margin-left: 30px
+		display: inline-flex
+		align-items: center
+		height: 50px
+		border-radius: 10px
+		background: transparent
+		color: #d2941f
+		border: 1px solid #d2941f
+		font-size: 16px
+		padding: 0 24px
+		text-decoration: none
+		.fas
+			font-size: 24px
+			margin-right: 12px
+	@media (max-width: 575.9px)
+		.btn-download
+			margin-left: 10px
+		.btn-download, .btn-send
+			font-size: 12px
+			padding: 0 12px
+			.fas,.fab
+				font-size: 20px

@@ -1,0 +1,33 @@
+.nav-2
+	@media (max-width: 1199.9px)
+		background: white
+		margin-top: -44px
+		position: relative
+		.nav-wrapper
+			padding: 0
+			position: relative
+			.category
+				display: flex
+				padding: 10px 0
+				cursor: pointer
+				p
+					text-transform: uppercase
+					color: map-get($mau, main)
+				.mdi
+					margin-left: auto
+					width: 25px
+					display: flex
+					justify-content: center
+					align-items: center
+		ul
+			flex-direction: column
+			height: 0
+			transition: all .3s ease-out
+			overflow: hidden
+			position: absolute
+			top: 100%
+			background: white
+			left: -10px
+			right: -10px
+			&.mobile-open
+				height: 285px

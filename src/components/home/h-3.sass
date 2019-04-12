@@ -1,0 +1,56 @@
+.home-3
+	background-image: url('../img/home/bg_1.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	.textbox
+		background: rgba(255,255,255,.3)
+		color: white
+		font-size: 14px
+		padding: 35px
+		display: flex
+		flex-wrap: wrap
+		@media (max-width: 1024px)
+			padding: 20px
+	.btn-viewmore
+		color: map-get($mau, main)
+		display: inline-block
+		margin-top: 30px
+		margin-left: auto
+		border-bottom: 1px solid transparent
+		&:hover
+			border-bottom: 1px solid map-get($mau, main)
+			text-decoration: none
+		.lnr
+			margin-left: 10px
+	.top
+		.title
+			@media (max-width: 1024px)
+				margin-bottom: 20px
+				img
+					max-height: 70px
+	.bottom
+		margin-top: 50px
+		@media (max-width: 1024px)
+			margin-top: 20px
+	.item
+		color: white
+		@media (max-width: 1024px)
+			margin-bottom: 30px
+		.title
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+			font-size: 16px
+			font-weight: 600
+			h4
+				font-size: inherit
+				font-weight: inherit
+			.img
+				flex: 0 0 70px
+				max-width: 70px
+		.content
+			font-size: 14px
+			p
+				font-size: inherit
+				font-weight: inherit

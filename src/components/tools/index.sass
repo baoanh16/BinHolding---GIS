@@ -1,0 +1,176 @@
+.passport-index
+	padding-top: 104px
+	@media (max-width: 1024px)
+		padding-top: 84px
+	@media (max-width: 767.9px)
+		padding-top: 40px
+	.container:nth-child(2)
+		margin-top: 50px
+	.main-title
+		text-align: center
+		margin-bottom: 8px
+	.main-description
+		text-align: center
+		color: #999999
+		margin-bottom: 28px
+	.form-check
+		border: 2px solid #ff9100
+		padding: 28px 18px
+		margin-bottom: 30px
+		h4
+			margin-bottom: 7px
+	.custom-select
+		margin-bottom: 25px
+		select
+			height: 40px
+			width: 100%
+			padding: 0 18px
+			background: white
+	.custom-radio
+		.radio
+			label
+				display: flex
+				align-items: center
+				font-size: 14px
+				font-weight: 400
+				position: relative
+				cursor: pointer
+				&:before
+					content: ''
+					width: 22px
+					height: 22px
+					border-radius: 50%
+					border: 1px solid #e3e3e3
+					display: inline-flex
+					margin-right: 6px
+				.tooltip-toggle
+					margin-left: 5px
+					cursor: pointer
+				.tooltip
+					display: none
+					position: absolute
+					min-width: 400px
+					z-index: 2
+					background: white
+					left: 100%
+					top: 50%
+					padding: 15px
+					box-shadow: 0 0 10px rgba(0,0,0,.3)
+					border-radius: 5px
+					margin-bottom: 10px
+					transform: translateY(-50%)
+					&:before
+						position: absolute
+						top: 50%
+						right: 100%
+						transform: translateY(-50%)
+						border-top: 7px solid transparent
+						border-bottom: 7px solid transparent
+						border-right: 10px solid white
+						content: ''
+			input
+				display: none
+				&:checked
+					~ label
+						&:before
+							border: 1px solid #fa8508
+							box-shadow: inset 0 0 0 2px white
+							background: #fa8508
+			+ .radio
+				margin-top: 14px
+	.result
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2)
+		padding: 20px
+		.flag
+			margin-top: -20px
+			text-align: center
+			img
+				border: 5px solid white
+				border-radius: 50%
+				max-width: 40px
+		.name,.rank,.list
+			padding: 14px 0
+			border-bottom: 1px solid #e1e1e1
+			h5
+				font-size: 16px
+				font-weight: 600
+				// text-transform: uppercase
+			a
+				color: map-get($mau, main)
+				border: 0
+				border-bottom: 1px solid map-get($mau, main)
+				text-decoration: none
+				font-size: 14px
+		.name
+			h5
+				text-transform: uppercase
+		.rank
+			h5
+				color: #999999
+		.social
+			padding: 14px 0
+			display: flex
+			.fab
+				font-size: 14px
+				width: 30px
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				height: 30px
+				border-radius: 50%
+				background: #cccccc
+				color: white
+				margin-right: 10px
+			.mdi-close
+				margin-left: auto
+				font-size: 30px
+				color: #cccccc
+				line-height: 1
+				cursor: pointer
+.visa-on-arrival
+	background: #f5f5f5
+	padding: 0 20px
+	padding-top: 40px
+	.row:first-child
+		span
+			color: #999999
+			font-weight: 400
+			+ span
+				margin-left: 30px
+	.area
+		margin: 0 0
+		padding: 30px 0
+		+ .area
+			border-top: 1px solid #d7d7d7
+		.area-title
+			@media (max-width: 1024px)
+				margin-bottom: 20px
+			h5
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+	.item
+		display: flex
+		align-items: center
+		text-decoration: none
+		color: lighten(black, 20%)
+		flex: 0 0 20%
+		max-width: 20%
+		margin-bottom: 12px
+		padding: 0 5px
+		@media (max-width: 1024px)
+			flex: 0 0 25%
+			max-width: 25%
+		@media (max-width: 767.9px)
+			flex: 0 0 33.3333%
+			max-width: 33.3333%
+		@media (max-width: 575.9px)
+			flex: 0 0 50%
+			max-width: 50%
+		img
+			flex: 0 0 24px
+			margin-right: 14px
+			max-width: 24px
+		h5
+			font-size: 14px
+			font-weight: 400

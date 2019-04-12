@@ -1,0 +1,42 @@
+.page-banner
+	position: relative
+.breadcrumb-wrapper
+	background: color-rgba(black,.4)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	@media (max-width: 767.9px)
+		display: none
+	ul
+		display: flex
+		height: 40px
+		align-items: center
+		li
+			a
+				color: white
+				font-size: 14px
+				&:hover
+					text-decoration: none
+					color: map-get($mau, main)
+			&:first-child
+				a
+					font-size: 0
+					&:before
+						line-height: 22px
+						content: '\f2dc'
+						font-family: 'Material Design Icons'
+						font-size: 20px
+			+ li
+				&:before
+					padding: 0 5px
+					line-height: 22px
+					content: '\e876'
+					font-family: 'Linearicons-Free'
+					font-size: 18px
+					color: white
+					font-size: 12px
+.banner-wrapper
+	img
+		min-height: 220px
+		object-fit: cover

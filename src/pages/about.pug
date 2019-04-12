@@ -3,6 +3,14 @@ extends _layout.pug
 block var
 	- var title = 'About'
 	- var bodyClass = 'about-page'
+	- var breadcrumb = ['Home','About']
+	- var link = 2 /*.jpg*/
 
 block main
-	
+	include ../components/banner/b-2.pug
+	include ../components/navigation/n-1.pug
+	include ../components/about/a-1.pug
+	include ../components/about/a-2.pug
+	include ../components/about/a-3.pug
+	include ../components/about/a-4.pug
+	include ../components/about/a-5.pug

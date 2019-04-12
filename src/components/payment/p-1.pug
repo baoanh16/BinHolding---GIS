@@ -1,0 +1,159 @@
+section.payment
+	.container.step-1
+		h2.main-title Secure Online Payment
+		.row
+			.col-lg-6
+				.form-wrapper
+					h4 Order Information
+					.row
+						.col-7.col-sm-8
+							.form-group.form-input
+								label Amount 
+									span *
+								input(type="text" placeholder="Eg: 19.00")
+						.col-5.col-sm-4
+							.form-group.form-select
+								label Currency
+									span *
+								select
+									option USD
+									option VND
+									option JPY
+						.col-12
+							.form-group.form-check
+								p Payment For
+									span *
+								.option
+									input#opt_1(type="checkbox", name="")
+									label(for="opt_1") Option 1
+								.option
+									input#opt_2(type="checkbox", name="")
+									label(for="opt_2") Option 2
+								.option
+									input#opt_3(type="checkbox", name="")
+									label(for="opt_3") Option 3
+								.option
+									input#opt_4(type="checkbox", name="")
+									label(for="opt_4") Option 4
+								.option
+									input#opt_5(type="checkbox", name="")
+									label(for="opt_5") Other
+						.col-12
+							.form-group.form-text
+								label Note (Maximum 50 characters) *
+								textarea
+				.payment-method
+					h4 
+						b payment method 
+						span (
+						a(href="#") Learn more
+						span about payment options)
+					ul.method-list
+						li
+							.method-wrapper
+								input#method_1(type="radio" checked name="method")
+								label(for="method_1") 
+									.img
+										img(src="./img/payment/method_1.png", alt="")
+									span Credit or Debit Card
+						li
+							.method-wrapper
+								input#method_2(type="radio" name="method")
+								label(for="method_2") 
+									.img
+										img(src="./img/payment/method_2.png", alt="")
+									span PayPal
+					.notice
+						p 
+							b Method of payment: Credit or Debit Card 
+							span which meets standards of international financial system such as PCI DSS of PCI Security Standards Council, 3D-Secure of Visa, Master Card.
+			.col-lg-6
+				.field-input
+					h3 Please fill in with your order information:
+					.row
+						.col-sm-6
+							.form-group
+								label Cart Number *
+								input(type="text", name="")
+						.col-sm-6
+							.form-group
+								label Cart Type *
+								img(src="./img/payment/type_visa.png", alt="")
+						.col-sm-6
+							.form-group
+								label Expired Date *
+								.date
+									.slt-opt
+										select#month(name="month")
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+									.slt-opt
+										select#year(name="year")
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+											option(value="") 0
+						.col-sm-6
+							.form-group
+								label CVV *
+									a(href="#") [ ? ]
+								input(type="text")
+					hr
+					h3 Billing Information 
+						span (Please review and correct the invalid field(s).)
+					.row.billing-info
+						.col-sm-6
+							.form-group
+								label First name *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label Last name *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label Address *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label City/Province *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label Country *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label State *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label State/Province/Region *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+					
+						.col-sm-6
+							.form-group
+								label ZIP Code *
+								input(type="text", name="" placeholder="placeholder")
+								span.error This field is required
+				.sub-notice
+					i After payment is made, you will receive an email confirming your payment.
+				.button
+					a.btn-proceed(href="#") Proceed to Payment

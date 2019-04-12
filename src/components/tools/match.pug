@@ -1,0 +1,196 @@
+section.program-match
+	.container
+		h2.main-title PROGRAM match
+		p.main-description Discover which programs best match your goals
+		.row
+			.col-lg-8
+				.match-wrapper
+					.match-opt.match-slider
+						h4 NET WORTH
+						p Indicate your personal net worth, in US$
+						.slider
+							.ui-slider-custom
+								.min.limit(data-value="0") 0
+								.max.limit(data-value="10000000") 10,000,000+
+					.match-opt.match-slider.amount
+						h4 CONTRIBUTION AMOUNT
+						p Indicate how much you are willing to contribute for a family of four, in US$
+						.slider
+							.ui-slider-custom
+								.min.limit(data-value="0") 0
+								.max.limit(data-value="10000000") 10,000,000+
+					.match-opt
+						h4 Contribution Type
+						p Indicate the type of contribution you would like to make
+						.list
+							.option
+								input#type_1(type="checkbox", name="type")
+								label(for="type_1") Option 1
+							.option
+								input#type_2(type="checkbox", name="type")
+								label(for="type_2") Option 2
+							.option
+								input#type_3(type="checkbox", name="type")
+								label(for="type_3") Option 3
+							.option
+								input#type_4(type="checkbox", name="type")
+								label(for="type_4") Option 4
+							.option
+								input#type_5(type="checkbox", name="type")
+								label(for="type_5") Other
+					.match-opt
+						h4 Financing
+						p Indicate if you would like to finance the required contribution
+						.custom-radio
+							.radio
+								input#financing_1(type="radio", name="financing")
+								label(for="financing_1") Yes
+							.radio
+								input#financing_2(type="radio", name="financing")
+								label(for="financing_2") No
+					.match-opt.match-row.speed
+						h4 SPEED
+						p Indicate how important it is the time to obtain citizenship as measured by the Passport Index
+						.custom-radio
+							.radio
+								input#speed_1(type="radio", name="speed")
+								label(for="speed_1") Very important
+							.radio
+								input#speed_2(type="radio", name="speed")
+								label(for="speed_2") Not important at all
+							.radio
+								input#speed_3(type="radio", name="speed")
+								label(for="speed_3") Somewhat important
+					.match-opt.relocation
+						h4 Relocation
+						p Indicate if relocating to fulfill citizenship requirements is an option for you
+						.custom-radio
+							.radio
+								input#relocation_1(type="radio", name="relocation")
+								label(for="relocation_1") Yes
+							.radio
+								input#relocation_2(type="radio", name="relocation")
+								label(for="relocation_2") No
+					.match-opt.mobility
+						h4 Mobility
+						p Indicate which countries and/or regions you would like to travel to visa-free
+						.list
+							.option
+								input#mobility_1(type="checkbox", name="")
+								label(for="mobility_1") Canada
+							.option
+								input#mobility_2(type="checkbox", name="")
+								label(for="mobility_2") Europe (Schengen zone)
+							.option
+								input#mobility_3(type="checkbox", name="")
+								label(for="mobility_3") USA
+					.match-opt.match-row.simplicity
+						h4 SIMPLICITY
+						p Indicate how important it is a simple procedure as measured by the Passport Index
+						.custom-radio
+							.radio
+								input#simpilicy_1(type="radio", name="simpilicy")
+								label(for="simpilicy_1") Very important
+							.radio
+								input#simpilicy_2(type="radio", name="simpilicy")
+								label(for="simpilicy_2") Not important at all
+							.radio
+								input#simpilicy_3(type="radio", name="simpilicy")
+								label(for="simpilicy_3") Somewhat important
+					.match-opt.match-row.quantity
+						h4 QUALITY OF LIFE
+						p Indicate how important it is a simple procedure as measured by the Passport Index
+						.custom-radio
+							.radio
+								input#quality_1(type="radio", name="quality")
+								label(for="quality_1") Very important
+							.radio
+								input#quality_2(type="radio", name="quality")
+								label(for="quality_2") Not important at all
+							.radio
+								input#quality_3(type="radio", name="quality")
+								label(for="quality_3") Somewhat important
+
+			.col-lg-3
+				.best-match-wrapper
+					.title
+						h4 Your best Match
+					.match-list
+						.match-item
+							.img
+								img(src="./img/tools/nv.png", alt="")
+								.name St. Kitts & Nevis
+							.content
+								.img
+									img(src="./img/tools/result.png", alt="")
+									span.val 56
+								.description
+									ul
+										li
+											span.cost
+											span Cost
+										li
+											span.quality
+											span Quality of Life
+										li
+											span.speed
+											span Speed
+										li
+											span.simplicity
+											span Simplicity
+										li
+											span.mobility
+											span Mobility
+						.match-item
+							.img
+								img(src="./img/tools/us.png", alt="")
+								.name USA
+							.content
+								.img
+									img(src="./img/tools/result.png", alt="")
+									span.val 12
+								.description
+									ul
+										li
+											span.cost
+											span Cost
+										li
+											span.quality
+											span Quality of Life
+										li
+											span.speed
+											span Speed
+										li
+											span.simplicity
+											span Simplicity
+										li
+											span.mobility
+											span Mobility
+						.match-item
+							.img
+								img(src="./img/tools/uk.png", alt="")
+								.name United Kingdom
+							.content
+								.img
+									img(src="./img/tools/result.png", alt="")
+									span.val 88
+								.description
+									ul
+										li
+											span.cost
+											span Cost
+										li
+											span.quality
+											span Quality of Life
+										li
+											span.speed
+											span Speed
+										li
+											span.simplicity
+											span Simplicity
+										li
+											span.mobility
+											span Mobility
+					.button
+						a.btn-proceed(href="#") Reset
+		hr

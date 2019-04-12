@@ -1,0 +1,12 @@
+mixin toolsNav(list)
+	.tools-nav
+		.container
+			.row
+				each item in list
+					.col-md-4.item-wrapper
+						a.item(href=item.link)
+							.img
+								img(src=item.img, alt="")
+							.content
+								h4= item.title
+								p= item.content
