@@ -1,0 +1,216 @@
+extends _layout.pug
+
+block var
+	- var title = 'Contact'
+	- var bodyClass = 'contact-page'
+	- var breadcrumb = ['Home', 'Contact']
+	- var link = 2 /*.jpg*/
+block main
+	include ../components/banner/b-2.pug
+	section.contact
+		.container
+			h2.main-title Contact us
+			.row
+				.col-lg-5
+					form.contact-form
+						h4 Contact Form
+						.form-group
+							label Subject *
+							input(type="text", name="")
+						.form-group
+							label Your Full Name
+							input(type="text", name="")
+						.form-group
+							label Email
+							input(type="text", name="")
+						.form-group.form-phone
+							label Phone (with country code)*
+							select
+								option +84
+								option +84
+								option +84
+							input(type="text", name="")
+						.form-group
+							label Nationality
+							select
+								option Viet nam
+								option Viet nam
+								option Viet nam
+						.form-group
+							label Current country of residence
+							select
+								option Viet nam
+								option Viet nam
+								option Viet nam
+						.form-group
+							label Your interested country
+							select
+								option Viet nam
+								option Viet nam
+								option Viet nam
+						.form-group
+							label Your interested country
+							textarea
+						.form-group.form-check
+							input#agree(type="checkbox", name="")
+							label(for="agree") I want to get more updates, information, news, and promotion about GIS's programs via email We only use your data for sending suitable content, you can read GIS Privacy Policy for further information
+						.form-button
+							button
+								span.fab.fa-telegram-plane
+								span Send your message
+				.col-lg-7
+					.imgbox
+						img(src="./img/contact/1.jpg", alt="")
+					.address-list
+						.nav
+							.item.active(data-target="#content-1")
+								.img
+									img(src="./img/contact/c_1.png", alt="")
+								.title
+									h4 Singapore
+							.item(data-target="#content-2")
+								.img
+									img(src="./img/contact/c_2.png", alt="")
+								.title
+									h4 Singapore
+							.item(data-target="#content-3")
+								.img
+									img(src="./img/contact/c_3.png", alt="")
+								.title
+									h4 Singapore
+							.item(data-target="#content-4")
+								.img
+									img(src="./img/contact/c_4.png", alt="")
+								.title
+									h4 Singapore
+							.item(data-target="#content-5")
+								.img
+									img(src="./img/contact/c_5.png", alt="")
+								.title
+									h4 Singapore
+						.content
+							.item#content-1
+								.textbox
+									h5 worldwide office in hongkong
+									p
+										span.mdi.mdi-map-marker 
+										span Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong. 
+									p 
+										span.mdi.mdi-briefcase 
+										span Working hours: 9AM - 6PM GMT+8 (Mon-Fri) 
+									p 
+										span.mdi.mdi-email
+										span Email: support@offshorecompanycorp.com 
+									p 
+										span.mdi.mdi-phone
+										span Hotline: +852 B190 0825 
+									p 
+										span.mdi.mdi-fax
+										span Fax Number: +852 3708 8304 
+									p
+										span.mdi.mdi-whatsapp
+										span WhatsApp: +852 94574036 
+								.viewmap
+									a(href="#") 
+										span.mdi.mdi-map 
+										span View Map
+							.item#content-2
+								.textbox
+									h5 worldwide office in hongkong
+									p
+										span.mdi.mdi-map-marker 
+										span Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong. 
+									p 
+										span.mdi.mdi-briefcase 
+										span Working hours: 9AM - 6PM GMT+8 (Mon-Fri) 
+									p 
+										span.mdi.mdi-email
+										span Email: support@offshorecompanycorp.com 
+									p 
+										span.mdi.mdi-phone
+										span Hotline: +852 B190 0825 
+									p 
+										span.mdi.mdi-fax
+										span Fax Number: +852 3708 8304 
+									p
+										span.mdi.mdi-whatsapp
+										span WhatsApp: +852 94574036 
+								.viewmap
+									a(href="#") 
+										span.mdi.mdi-map 
+										span View Map
+							.item#content-3
+								.textbox
+									h5 worldwide office in hongkong
+									p
+										span.mdi.mdi-map-marker 
+										span Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong. 
+									p 
+										span.mdi.mdi-briefcase 
+										span Working hours: 9AM - 6PM GMT+8 (Mon-Fri) 
+									p 
+										span.mdi.mdi-email
+										span Email: support@offshorecompanycorp.com 
+									p 
+										span.mdi.mdi-phone
+										span Hotline: +852 B190 0825 
+									p 
+										span.mdi.mdi-fax
+										span Fax Number: +852 3708 8304 
+									p
+										span.mdi.mdi-whatsapp
+										span WhatsApp: +852 94574036 
+								.viewmap
+									a(href="#") 
+										span.mdi.mdi-map 
+										span View Map
+							.item#content-4
+								.textbox
+									h5 worldwide office in hongkong
+									p
+										span.mdi.mdi-map-marker 
+										span Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong. 
+									p 
+										span.mdi.mdi-briefcase 
+										span Working hours: 9AM - 6PM GMT+8 (Mon-Fri) 
+									p 
+										span.mdi.mdi-email
+										span Email: support@offshorecompanycorp.com 
+									p 
+										span.mdi.mdi-phone
+										span Hotline: +852 B190 0825 
+									p 
+										span.mdi.mdi-fax
+										span Fax Number: +852 3708 8304 
+									p
+										span.mdi.mdi-whatsapp
+										span WhatsApp: +852 94574036 
+								.viewmap
+									a(href="#") 
+										span.mdi.mdi-map 
+										span View Map
+							.item#content-5
+								.textbox
+									h5 worldwide office in hongkong
+									p
+										span.mdi.mdi-map-marker 
+										span Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong. 
+									p 
+										span.mdi.mdi-briefcase 
+										span Working hours: 9AM - 6PM GMT+8 (Mon-Fri) 
+									p 
+										span.mdi.mdi-email
+										span Email: support@offshorecompanycorp.com 
+									p 
+										span.mdi.mdi-phone
+										span Hotline: +852 B190 0825 
+									p 
+										span.mdi.mdi-fax
+										span Fax Number: +852 3708 8304 
+									p
+										span.mdi.mdi-whatsapp
+										span WhatsApp: +852 94574036 
+								.viewmap
+									a(href="#") 
+										span.mdi.mdi-map 
+										span View Map

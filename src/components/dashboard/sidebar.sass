@@ -1,0 +1,48 @@
+.user-avatar
+	padding: 20px
+	background: white
+	figure
+		display: flex
+		align-items: center
+		.imgbox
+			flex: 0 0 70px
+			max-width: 70px
+			height: 70px
+			a
+				display: flex
+				height: 100%
+				width: 100%
+				border-radius: 50%
+				overflow: hidden
+		figcaption
+			flex-basis: 0
+			flex-grow: 1
+			max-width: 100%
+			padding-left: 10px
+			p
+				font-size: 14px
+				color: #666666
+			h3
+				color: map-get($mau, main)
+				text-transform: uppercase
+				font-size: 15px
+.sidebar-navigation
+	padding-bottom: 35px
+	background: white
+	ul
+		background: #ebebeb
+		li
+			border-bottom: 1px solid white
+			a
+				display: flex
+				height: 40px
+				align-items: center
+				padding-left: 30px
+				text-transform: uppercase
+				font-size: 14px
+				color: #666666
+				text-decoration: none
+			&:hover, &.active
+				a
+					background: map-get($mau, main)
+					color: white

@@ -104,12 +104,15 @@ $(document).ready(function () {
 		speed: 1200,
 		loop: true,
 		spaceBetween: 20,
+		loopAdditionalSlides: 1,
 		breakpoints: {
 			1024: {
+				loop: true,
 				slidesPerView: 2.3,
 				spaceBetween: 10,
 			},
 			768: {
+				loop: true,
 				slidesPerView: 1.3
 			}
 		}
@@ -262,6 +265,115 @@ $(document).ready(function () {
 	$('.best-match-wrapper .match-item').on('click', function (e) {
 		$(this).find('.content').fadeToggle()
 		$(this).siblings('.match-item').find('.content').fadeOut()
+	})
 
+	$('.topic-item .title').on('click', function (e) {
+		$(this).parent().toggleClass('show')
+		$(this).siblings('.content').slideToggle()
+	})
+
+	var ResidenceImportantSlider = new Swiper('.important-2 .swiper-container', {
+		slidesPerView: 4,
+		loop: true,
+		loopAdditionalSlides: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			1025: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			500: {
+				slidesPerView: 1,
+			}
+		},
+		navigation: {
+			prevEl: '.important-2 .swiper-prev',
+			nextEl: '.important-2 .swiper-next'
+		},
+		speed: 1000,
+	})
+
+	$('.important-3 .item').each(function () {
+		let realHeight = $(this).find('.textbox').height()
+		if ($(this).find('.textbox').height() < 84) {
+			$(this).find('.button-wrapper').remove()
+		}
+		$(this).find('.textbox').css({
+			height: "84px"
+		})
+		let itemHeight = $(this).height()
+		$(this).parents('.col-lg-6').css({
+			"padding-bottom": itemHeight,
+			"margin-bottom": 30,
+		})
+		$(this).find('.button-wrapper a').on('click', function () {
+			$(this).parents('.item').toggleClass('show')
+			if ($(this).parents('.item').hasClass('show')) {
+				$(this).parents('.content').find('.textbox').animate({
+					height: realHeight
+				}, 600);
+				$(this).html('<span>View less</span><span class="lnr lnr-chevron-up"></xpan>')
+				$(this).parents('.col-lg-6').css({
+					"z-index": 10,
+				})
+			} else {
+				$(this).parents('.content').find('.textbox').animate({
+					height: "84px"
+				}, 600);
+				$(this).html('<span>View more</span><span class="lnr lnr-chevron-down"></xpan>')
+				$(this).parents('.col-lg-6').css({
+					"z-index": 0,
+				})
+			}
+		})
+	})
+
+
+	// Overview - 4
+	if ($(window).width() >= 1025) {
+		$('.overview-4 .textbox').height($('.overview-4 .imgbox').height())
+	} else {
+		$('.overview-4 .textbox').height('auto')
+	}
+	$(window).on('resize', function () {
+		if ($(window).width() >= 1025) {
+			$('.overview-4 .textbox').height($('.overview-4 .imgbox').height())
+		} else {
+			$('.overview-4 .textbox').height('auto')
+		}
+	})
+
+	$('[data-popup]').on('click', function (e) {
+		e.preventDefault()
+		let target = $(this).attr('href')
+		$(target).css({
+			"display": "flex"
+		}).animate({
+			"opacity": 1
+		}, 400)
+	})
+	$('.popup-container .btn-close').each(function () {
+		$(this).on('click', function () {
+			$(this).parents('.popup-container').fadeOut()
+			$(this).parents('.popup-container').css({
+				"opacity": 0
+			})
+		})
+	})
+	$('.contact .address-list .nav .item').each(function () {
+		if ($(this).hasClass('active')) {
+			let target = $(this).attr('data-target')
+			$('.contact .address-list .content .item').hide()
+			$(target).fadeIn()
+		}
+		$(this).on('click', function () {
+			$(this).addClass('active')
+			$('.contact .address-list .nav .item').not(this).removeClass('active')
+			let target = $(this).attr('data-target')
+			$('.contact .address-list .content .item').hide()
+			$(target).fadeIn()
+		})
 	})
 });

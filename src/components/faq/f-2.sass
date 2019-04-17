@@ -1,0 +1,74 @@
+.faq-search
+	.main-title
+		text-align: center
+	.search-form-wrapper
+		background: #f5f5f5
+		padding: 25px 30px
+	.form-button
+		flex: 0 0 180px
+		max-width: 180px
+		padding: 0 10px
+		display: flex
+		align-items: flex-end
+		margin-bottom: 20px
+		button
+			border: 0
+			background: map-get($mau, main)
+			color: white
+			width: 160px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 14px
+			text-transform: uppercase
+			border-radius: 5px
+		@media (max-width: 1024px)
+			flex: 0 0 50%
+			max-width: 50%
+			button
+				flex: 0 0 100%
+				max-width: 100%
+		@media (max-width: 575.9px)
+			margin-top: 20px
+			flex: 0 0 100%
+			max-width: 100%
+	.form-group
+		flex-basis: 0
+		flex-grow: 1
+		max-width: 100%
+		padding: 0 10px
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 20px
+		@media (max-width: 1024px)
+			flex: 0 0 50%
+			max-width: 50%
+		@media (max-width: 575.9px)
+			flex: 0 0 100%
+			max-width: 100%
+		input, select
+			height: 50px
+			background: white
+			-webkit-appearance: none
+			border: 1px solid #e1e1e1
+			border-radius: 5px
+			padding: 0 17px
+			font-size: 14px
+			width: 100%
+		label
+			flex: 0 0 100%
+			max-width: 100%
+			font-size: 16px
+			font-weight: 500
+			margin-bottom: 5px
+		&.custom-select
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 52px
+				right: 27px
+				border-left: 5px solid transparent
+				border-right: 5px solid transparent
+				border-top: 5px solid map-get($mau, main)

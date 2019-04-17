@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'FAQs'
+	- var bodyClass = 'faqs-page'
+	- var breadcrumb = ['Home', 'Residence','Bulgaria','FAQs']
+	- var link = 2 /*.jpg*/
+block main
+	include ../components/banner/b-2.pug
+	include ../components/navigation/n-2.pug
+	include ../components/faq/f-1.pug
+	include ../components/have-tea-together/h-1.pug

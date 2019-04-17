@@ -15,34 +15,27 @@
 		justify-content: center
 		@media (max-width: 1199.9px)
 			margin-top: 16px
-	.btn-send
-		display: inline-flex
-		align-items: center
-		height: 50px
-		border-radius: 10px
-		background: map-get($mau, main)
-		color: white
-		font-size: 16px
-		padding: 0 24px
-		text-decoration: none
-		.fab
-			font-size: 24px
-			margin-right: 12px
 	.btn-download
 		margin-left: 30px
+	.btn-send, .btn-download
 		display: inline-flex
 		align-items: center
 		height: 50px
 		border-radius: 10px
 		background: transparent
-		color: #d2941f
 		border: 1px solid #d2941f
+		color: map-get($mau, main)
 		font-size: 16px
 		padding: 0 24px
 		text-decoration: none
-		.fas
+		transition: all .3s ease-out
+		.fab,.fas
 			font-size: 24px
 			margin-right: 12px
+		@media (min-width: 1025px)
+			&:hover
+				color: white
+				background: map-get($mau, main)
 	@media (max-width: 575.9px)
 		.btn-download
 			margin-left: 10px

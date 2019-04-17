@@ -1,0 +1,43 @@
+.media-3
+	padding-top: 70px
+	@media (min-width: 1025px)
+		padding-top: 90px
+	.main-title
+		text-align: center
+	@media (min-width: 768px)
+		.col-lg-12.col-md-6
+			margin-bottom: 20px
+	.gov-news-item
+		display: block
+		margin-bottom: 30px
+
+.gov-news-item
+	&.side
+		@media (min-width: 1025px)
+			figure
+				display: flex
+			.imgbox
+				flex: 0 0 190px
+				max-width: 190px
+				overflow: initial
+				.corner
+					height: 20px
+					top: 0
+					background: transparent
+					color: #fcb712
+					left: 210px
+					text-transform: capitalize
+					padding: 0
+					span
+						line-height: 20px
+						font-size: 12px
+						white-space: nowrap
+			figcaption
+				padding-left: 20px
+				padding-top: 20px
+				p
+					display: none
+			&:hover
+				.imgbox
+					img
+						transform: scale(1)

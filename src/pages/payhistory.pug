@@ -1,0 +1,197 @@
+extends _layout.pug
+
+block var
+	- var title = 'Pay History'
+	- var bodyClass = 'admin-page'
+	- var breadcrumb = ['Home', 'Pay History']
+	- var link = 2 /*.jpg*/
+block main
+	.page-banner
+		.breadcrumb-wrapper
+			.container
+				ul
+					each item in breadcrumb
+						li
+							a(href="#")= item
+	section.pay-history
+		.container
+			.row
+				include ../components/dashboard/sidebar.pug
+				.col-lg-8.col-xl-9
+					.pay-history-wrapper
+						h3 Pay History
+						.table-responsive
+							table
+								thead 
+									tr 
+										th Transaction code (T-code)
+										th Transaction information 
+										th payment date
+										th payment
+										th status
+								tbody
+									tr
+										td 
+											a(href="#popup-1" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.success
+											span.fas.fa-check
+											span Successful
+									tr
+										td 
+											a(href="#popup-2" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.pending
+											span.fas.fa-times
+											span Deny
+									tr
+										td 
+											a(href="#popup-3" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.success
+											span.fas.fa-check
+											span Successful
+									tr
+										td 
+											a(href="#popup-4" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.pending
+											span.fas.fa-times
+											span Deny
+									tr
+										td 
+											a(href="#popup-5" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.success
+											span.fas.fa-check
+											span Successful
+									tr
+										td 
+											a(href="#popup-6" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.pending
+											span.fas.fa-times
+											span Deny
+									tr
+										td 
+											a(href="#popup-7" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.success
+											span.fas.fa-check
+											span Successful
+									tr
+										td 
+											a(href="#popup-8" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.pending
+											span.fas.fa-times
+											span Deny
+									tr
+										td 
+											a(href="#popup-9" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.success
+											span.fas.fa-check
+											span Successful
+									tr
+										td 
+											a(href="#popup-10" data-popup) 456982859
+										td Lorem ipsum dolor sit amet
+										td 27, Mar, 2019
+										td 300$
+										td.pending
+											span.fas.fa-times
+											span Deny
+						include ../components/pagination/p-1.pug
+					.info-popup-here
+						#popup-1.popup-container
+							.popup-bg
+							.popup-content
+								.popup-heading
+									h4
+										span your payment: 
+										span #456982859
+									.btn-close
+										span.lnr.lnr-cross
+								.popup-body
+									.row.no-gutters
+										.col-sm
+											h3 Payment detail
+											p This payment have status 
+												span.success Success
+										.col-sm-auto
+											a.btn(href="#") View Receipt
+										.table-responsive
+											table
+												tr
+													td Insert Date
+													td.date March/04/ 2019, 11:03:26
+												tr
+													td Payment Date
+													td.date March/04/ 2019, 11:03:26
+												tr
+													td Amount
+													td.price US $1.00
+												tr
+													td Note
+													td Lorem ipsum dolor sit amet
+												tr
+													td Method
+													td.method Credit or Debit Card - Mastercard ( Passed 3D Secure)
+												tr
+													td Payment for
+													td 
+														p + Virtual Office & Local Phone Number
+														p + Incorporation
+						#popup-2.popup-container
+							.popup-bg
+							.popup-content
+								.popup-heading
+									h4
+										span your payment: 
+										span #456982859
+									.btn-close
+										span.lnr.lnr-cross
+								.popup-body
+									.row.no-gutters
+										.col-sm
+											h3 Payment detail
+											p This payment have status 
+												span.pending Pending
+										.col-sm-auto
+											a.btn(href="#") Payment now
+										.table-responsive
+											table
+												tr
+													td Insert Date
+													td.date March/04/ 2019, 11:03:26
+												tr
+													td Amount
+													td.price US $1.00
+												tr
+													td Note
+													td Lorem ipsum dolor sit amet
+												tr
+													td Method
+													td.method Paypal
+												tr
+													td Payment for
+													td + Virtual Office & Local Phone Number

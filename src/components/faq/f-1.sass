@@ -1,0 +1,137 @@
+.faq-1
+	.main-title
+		text-align: center
+	.form-search
+		height: 50px
+		border-radius: 5px
+		position: relative
+		max-width: 715px
+		overflow: hidden
+		margin-bottom: 30px
+		button
+			position: absolute
+			top: 0
+			right: 0
+			width: 50px
+			height: 50px
+			border: 0
+			background: #e1a22d
+			font-size: 20px
+			color: white
+		input
+			width: 100%
+			height: 100%
+			background: #f2f2f2
+			border: 0
+			padding: 0 70px 0 20px
+			font-size: 14px
+			&::placeholder
+				font-style: italic
+	.btn-help
+		height: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 14px
+		color: white
+		background: #fa8508
+		text-decoration: none
+		border-radius: 5px
+		.fab
+			margin-right: 5px
+			font-size: 18px
+	.button-wrapper
+		margin-bottom: 20px
+	.send-feedback
+		padding: 30px 20px
+		background: #f2f2f2
+		h4
+			text-transform: uppercase
+			font-size: 16px
+			color: #333
+			margin-bottom: 12px
+		p
+			font-size: 12px
+			color: #666666
+			margin-bottom: 8px
+	.col-lg-3
+		@media (max-width: 1024px)
+			margin-top: 30px
+	.form-group
+		margin-bottom: 20px
+		label
+			font-size: 12px
+			font-style: italic
+		input,textarea
+			color: #666666
+			width: 100%
+			padding: 7px 15px
+			border: 1px solid #e1e1e1
+			border-radius: 4px
+			font-size: 12px
+			&::placeholder
+				font-style: italic
+				color: #c2c2c2
+		input
+			height: 36px
+		textarea
+			height: 85px
+	.form-button
+		button
+			height: 40px
+			border-radius: 5px
+			background: map-get($mau, main)
+			display: flex
+			justify-content: center
+			align-items: center
+			color: white
+			font-size: 14px
+			border: 0
+			padding: 0 15px
+			margin: 0 auto
+
+.topic-item
+	border: 1px solid #e1e1e1
+	border-radius: 5px
+	padding: 15px 0
+	font-size: 14px
+	color: #666666
+	margin-bottom: 12px
+	.title
+		color: inherit
+		position: relative
+		font-weight: 400
+		padding: 0 50px 0 20px
+		transition: all .3s ease-out
+		cursor: pointer
+		b
+			color: #333
+		&:after
+			content: '\f419'
+			font-family: 'Material Design Icons'
+			right: 20px
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease-out
+		@media (max-width: 1024px)
+			padding: 0 30px 0 10px
+			&:after
+				right: 8px
+	.content
+		font-weight: 400
+		padding: 7px 50px 0 20px
+		display: none
+		@media (max-width: 1024px)
+			padding: 7px 10px 0 10px
+		p,span
+			font-size: inherit
+			color: inherit
+	&.show
+		.title
+			font-weight: 700
+			color: map-get($mau, main)
+			@media (max-width: 1024px)
+				font-weight: 400
+			&:after
+				content: '\f377'

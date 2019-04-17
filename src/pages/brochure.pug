@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Brochure'
+	- var bodyClass = 'brochure-page'
+	- var breadcrumb = ['Home', 'Download form/ brochure','Brochure']
+	- var link = 2 /*.jpg*/
+block main
+	include ../components/banner/b-2.pug
+	include ../components/navigation/n-3.pug
+	include ../components/brochure/b-1.pug

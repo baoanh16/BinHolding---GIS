@@ -1,0 +1,73 @@
+.important-2
+	padding-top: 0
+	.main-title
+		text-align: center
+	.slide-wrapper
+		position: relative
+		.swiper-prev,.swiper-next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 2
+			font-size: 35px
+			color: #999999
+			cursor: pointer
+			display: flex
+			justify-content: center
+			align-items: center
+			&:focus
+				outline: none
+		.swiper-prev
+			right: 100%
+			margin-right: 10px
+		.swiper-next
+			left: 100%
+			margin-left: 10px
+		@media (max-width: 1024px)
+			.swiper-prev,.swiper-next
+				width: 40px
+				height: 40px
+				background: rgba(255,255,255,.7)
+				font-size: 28px
+			.swiper-prev
+				right: unset
+				left: 0
+			.swiper-next
+				left: unset
+				right: 0
+	.item
+		a
+			text-decoration: none
+		.imgbox
+			overflow: hidden
+			img
+				width: 100%
+				transition: all .3s ease-out
+		figcaption
+			padding-top: 15px
+		h4
+			margin-bottom: 12px
+			a
+				font-weight: 700
+				font-size: 16px
+				color: #333
+				transition: all .3s ease-out
+		p
+			-webkit-line-clamp: 3
+			font-size: 14px
+			max-height: 63px
+			overflow: hidden
+			text-overflow: ellipsis
+			display: -webkit-box
+			-webkit-box-orient: vertical
+			color: #666666
+			font-weight: 400
+		@media (min-width: 1025px)
+			&:hover
+				.imgbox
+					img
+						transform: scale(1.05)
+				figcaption
+					transition: all .3s ease-out
+					a
+						color: map-get($mau, main)

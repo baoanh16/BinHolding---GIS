@@ -1,0 +1,56 @@
+.overview-2
+	.main-title
+		text-align: center
+	.row
+		justify-content: center
+	@media (max-width: 1024px)
+		.col-lg-4.col-md-6
+			margin-bottom: 20px
+.overview-item
+	text-decoration: none
+	.imgbox
+		overflow: hidden
+		img
+			width: 100%
+			transition: all .3s ease-out
+	.btn-viewmore
+		transition: all .3s ease-out
+		opacity: 0
+		color: white
+		border-bottom: 1px solid white
+		font-size: 14px
+		.lnr
+			margin-left: 16px
+	figcaption
+		padding: 15px 30px
+		transition: all .3s ease-out
+		h4
+			transition: all .3s ease-out
+			font-size: 14px
+			color: lighten(black ,20%)
+			margin-bottom: 7px
+	&:hover
+		text-decoration: none
+	@media (max-width: 1024px)
+		text-decoration: none
+		.imgbox
+			img
+				transform: scale(1.05)
+		figcaption
+			background: map-get($mau, main)
+			h4
+				color: white
+		.btn-viewmore
+			opacity: 1
+	@media (min-width: 1025px)
+		&:hover
+			text-decoration: none
+			.imgbox
+				img
+					transform: scale(1.05)
+			figcaption
+				background: map-get($mau, main)
+				h4
+					color: white
+			.btn-viewmore
+				opacity: 1

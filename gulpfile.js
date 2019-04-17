@@ -69,7 +69,7 @@ gulp.task('js', function () {
 	})
 		.pipe(srcmap.init())
 		.pipe(babel({
-			presets: ['@babel/preset-env']
+			presets: ['@babel/env']
 		}))
 		.pipe(uglify())
 		.pipe(rename({

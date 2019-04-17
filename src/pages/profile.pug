@@ -1,0 +1,80 @@
+extends _layout.pug
+
+block var
+	- var title = 'Payment Online 03'
+	- var bodyClass = 'program-online-3-page'
+	- var breadcrumb = ['Home','Gis Tool','Make Payment']
+
+block main
+	.page-banner
+		.breadcrumb-wrapper
+			.container
+				ul
+					each item in breadcrumb
+						li
+							a(href="#")= item
+	section.profile
+		.container
+			.row
+				include ../components/dashboard/sidebar.pug
+				.col-lg-8.col-xl-9
+					.profile-wrapper
+						h3 My profile
+						form
+							.form-group
+								label First name
+								input(type="text", name="")
+							.form-group
+								label last name
+								input(type="text", name="")
+							.form-group.form-select-input
+								label Phone number
+								select
+									option +84
+									option +84
+									option +84
+								input(type="text", name="")
+							.form-group
+								label Date of birth
+								input(type="text", name="")
+							.form-group.custom-select.custom-radio
+								h5 Gender
+								ul
+									li.radio
+										input#male(type="radio", name="gender")
+										label(for="male") Male
+									li.radio
+										input#female(type="radio", name="gender")
+										label(for="female") Female
+							.form-group.custom-select.custom-radio
+								h5 HOW DO YOU WANT US TO CONTACT YOU? 
+								ul
+									li.radio
+										input#phone(type="radio", name="method")
+										label(for="phone") Phone
+									li.radio
+										input#email(type="radio", name="method")
+										label(for="email") Email
+							.form-group.country
+								label Country
+								select
+									option Country
+									option Country
+									option Country
+							.form-group.country
+								label City
+								select
+									option Country
+									option Country
+									option Country
+							.form-group
+								label Ward
+								input(type="text", name="")
+							.form-group
+								label Address
+								input(type="text", name="")
+							.form-group.form-check
+								input#subscribe(type="checkbox", name="")
+								label(for="subscribe") Subscribe to our letters
+							.form-button
+								button Save Change

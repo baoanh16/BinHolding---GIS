@@ -1,0 +1,238 @@
+.residence-1
+	.main-title
+		text-align: center
+	@media (min-width: 1025px)
+		.col-xl-3
+			.col-right
+				position: sticky
+				top: 120px
+	@media (max-width: 1024px)
+		.col-right
+			margin-top: 30px
+	.textbox
+		font-size: 14px
+		font-weight: 400
+		.list-item
+			margin-top: 30px
+		.item
+			padding: 30px 0
+			figure
+				display: flex
+			.imgbox
+				flex: 0 0 44%
+				max-width: 44%
+				img
+					width: 100%
+			figcaption
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				padding-left: 20px
+			h4
+				font-size: 18px
+				font-weight: 600
+				margin-bottom: 12px	
+			p
+				font-size: 14px
+				font-weight: 400
+			@media (max-width: 767.9px)
+				figure
+					flex-wrap: wrap
+				.imgbox,figcaption
+					flex: 0 0 100%
+					max-width: 100%
+					padding-left: 0
+					padding-top: 10px
+	.button-wrapper
+		.btn-apply
+			display: inline-flex
+			min-width: 200px
+			height: 50px
+			justify-content: center
+			align-items: center
+			background: #fdd325
+			color: #333333
+			text-decoration: none
+			border-radius: 5px
+			.fab
+				margin-right: 15px
+			@media (max-width: 1024px)
+				min-width: 100%
+		.btn-send,.btn-download
+			margin-bottom: 20px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #d2941f
+			border: 1px solid #d2941f
+			font-size: 14px
+			font-weight: 500
+			text-decoration: none
+			border-radius: 5px
+			.fas,.fab
+				margin-right: 10px
+			@media (min-width: 1025px)
+				&:hover
+					color: white
+					border: 1px solid map-get($mau, main)
+					background: map-get($mau, main)
+	.request-callback
+		padding: 28px 20px
+		background: #f2f2f2
+		h4
+			text-transform: uppercase
+			margin-bottom: 24px
+		.form-group
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 16px
+			label
+				font-size: 12px
+				font-weight: 400
+				font-style: italic
+				max-width: 100%
+				flex: 0 0 100%
+			input
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				width: 100%
+				padding: 0 14px
+			input,select
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				width: 100%
+				height: 35px
+				background: white
+				border: 1px solid #e1e1e1
+				border-radius: 5px
+				font-size: 12px
+				color: #333
+				&::placeholder
+					font-style: italic
+			&:nth-child(3)
+				select
+					flex: 0 0 60px
+					max-width: 60px
+					margin-right: 10px
+					padding: 0 7px
+		.form-button
+			margin-top: 25px
+			button
+				width: 170px
+				display: block
+				margin: 0 auto
+				height: 40px
+				border-radius: 5px
+				background: map-get($mau, main)
+				font-size: 12px
+				color: white
+				border: 0
+.application-process
+	padding-top: 50px
+	ul
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 30px
+		padding-left: 8px
+		li
+			padding: 0 30px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #f4f0e7
+			position: relative
+			color: #d2941f
+			margin-left: -8px
+			&:before
+				position: absolute
+				width: 0
+				height: 0
+				border-top: 25px solid transparent
+				border-bottom: 25px solid transparent
+				border-left: 10px solid #f4f0e7
+				content: ''
+				left: 100%
+				z-index: 2
+				margin-left: -2px
+			&:after
+				position: absolute
+				width: 0
+				height: 0
+				border-top: 25px solid transparent
+				border-bottom: 25px solid transparent
+				border-left: 10px solid color-rgba(#d2941f,.3)
+				content: ''
+				left: 100%
+				z-index: 1
+				margin-left: -1px 
+	h3
+		font-size: 20px
+		color: map-get($mau, main)
+		font-weight: 600
+		margin-bottom: 20px
+
+.process-map
+	position: relative
+	padding-bottom: 10px
+	margin-bottom: 40px
+	&:before
+		content: ''
+		position: absolute
+		height: 100%
+		width: 6px
+		background: map-get($mau, main)
+		left: 20px
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 16px
+		border-top: 13px solid map-get($mau, main)
+		border-left: 7px solid transparent
+		border-right: 7px solid transparent
+
+		
+	.item
+		background: #f2f2f2
+		border-radius: 5px
+		padding: 15px 20px
+		margin-bottom: 20px
+		margin-left: 50px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			right: 100%
+			top: 50%
+			transform: translateY(-50%)
+			border-top: 8px solid transparent
+			border-bottom: 8px solid transparent
+			border-right: 8px solid #f2f2f2
+		&:after
+			content: ''
+			position: absolute
+			right: 100%
+			margin-right: 22px
+			top: 50%
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background: white
+			transform: translateY(-50%)
+			border: 1px solid map-get($mau, main)
+	@media (max-width: 1024px)
+		&:before
+			left: 0
+		&:after
+			left: -4px
+		.item
+			margin-left: 30px
+	h4
+		font-size: 18px
+		margin: 5px
+	p
+		font-size: 14px

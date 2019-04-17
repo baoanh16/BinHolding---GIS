@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'FAQs Detail'
+	- var bodyClass = 'faqs-detail-page'
+	- var breadcrumb = ['Home', 'FAQs']
+	- var link = 2 /*.jpg*/
+block main
+	include ../components/banner/b-2.pug
+	include ../components/faq/f-6.pug

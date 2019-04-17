@@ -3,15 +3,18 @@ section.download-1
 		h2.main-title Download Forms
 		p.main-description Choose your interested program and country you want to explore.
 		.row
-			.col-lg-4.col-sm-6
-				.download-item
-					figure
-						.imgbox
-							img(src="./img/download/1.jpg", alt="")
-						figcaption
-							h4 Bulgaria residence program
-							time 
-								span.fas.fa-calendar-alt
-								span Updated on 08/2019
-							a.btn-download(href="#")
+			- for(i=0;i<6;i++)
+				.col-xl-4.col-md-6
+					.download-item
+						figure
+							.imgbox
+								img(src="./img/download/1.jpg", alt="")
+							figcaption
+								h4 Bulgaria residence program
+								time 
+									span.fas.fa-calendar-alt
+									span Updated on 08/2019
+								a.btn-download(href="#" download)
+									span.fas.fa-download
+									span Download for free
 		include ../pagination/p-1.pug

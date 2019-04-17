@@ -1,2 +1,66 @@
 .download-item
+	margin-bottom: 30px
 	figure
+		display: flex
+		.imgbox
+			flex: 0 0 165px
+			max-width: 165px
+			border: 10px solid #f4f0e7
+			@media (max-width: 575.9px)
+				flex: 0 0 130px
+				max-width: 130px
+		figcaption
+			flex-basis: 0
+			flex-grow: 1
+			max-width: 100%
+			padding: 20px 20px 0 20px
+			display: flex
+			flex-direction: column
+			@media (max-width: 575.9px)
+				padding: 10px 10px 0 10px
+		h4
+			font-size: 16px
+			font-weight: 600
+			margin-bottom: 7px
+			@media (max-width: 575.9px)
+				font-size: 14px
+		time
+			font-size: 14px
+			display: block
+			color: #666666
+			font-weight: 400
+			@media (max-width: 575.9px)
+				font-size: 12px
+			.fas
+				margin-right: 5px
+		.btn-download
+			margin-top: auto
+			height: 40px
+			border-radius: 4px
+			border: 1px solid #d2941f
+			color: #d2941f
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 12px
+			text-decoration: none
+			transition: all .3s ease-out
+			max-width: 175px
+			.fas
+				font-size: 14px
+				margin-right: 5px
+			@media (min-width: 1025px)
+				&:hover
+					background: #d2941f
+					color: white
+.download-1
+	.main-title
+		text-align: center
+		margin-bottom: 12px
+	.main-description
+		padding: 0 100px
+		text-align: center
+		margin-bottom: 20px
+		font-size: 16px
+		@media (max-width: 1024px)
+			padding: 0 0

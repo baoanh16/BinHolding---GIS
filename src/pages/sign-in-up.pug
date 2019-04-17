@@ -1,0 +1,67 @@
+extends _layout.pug
+
+block var
+	- var title = 'Login/ Register'
+	- var bodyClass = 'signinup-page'
+	- var breadcrumb = ['Home', 'Login/ Register']
+block main
+	.page-banner
+		.breadcrumb-wrapper
+			.container
+				ul
+					each item in breadcrumb
+						li
+							a(href="#")= item
+	section.sign-in-up
+		.container
+			h2.main-title Welcome to GIS
+			.row.no-gutters.sign-in-up-wrapper
+				.col-lg-4
+					.login-wrapper
+						h3 Login
+						form.row
+							.form-group.col-12
+								label Email *
+								input(type="text")
+							.form-group.col-12
+								label Password *
+								input(type="text")
+							.form-button.col-12
+								button.btn-sign Sign in
+							.col-12
+								a.btn-forgot(href="forgotpassword.html") Forgot password?
+				.col-lg-8
+					.sign-in-wrapper
+						h3 Register
+						form.row
+							.form-group.col-md-6
+								label First name
+								input(type="text")
+							.form-group.col-md-6
+								label last Name
+								input(type="text")
+							.form-group.col-md-6
+								label Email *
+								input(type="text")
+							.form-group.form-phone.col-md-6
+								label Phone
+								select
+									option(value="") +84
+									option(value="") +84
+									option(value="") +84
+									option(value="") +84
+								input(type="text")
+							.form-group.col-md-6
+								label Password *
+								input(type="password")
+								span.error password không khớp
+							.form-group.col-md-6
+								label Confirm Password *
+								input(type="password")
+								span.error asdasdasd
+							.form-group.form-check.col-12
+								input#subscribe(type="checkbox", name="")
+								label(for="subscribe") I have read and agree to these 
+									a(href="#") Terms and Conditons
+							.form-button.col-12
+								button.btn-sign Register
