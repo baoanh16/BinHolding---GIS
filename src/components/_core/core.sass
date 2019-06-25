@@ -90,14 +90,13 @@ ul
 				a,span
 					background: color-rgba(#e1a22d,.5)
 					color: white
-main
-	overflow-x: hidden
 
 .fixex-tool
 	position: fixed
 	top: 150px
 	right: -150px
 	min-width: 200px
+	z-index: 20
 	.title
 		height: 50px
 		width: 50px
@@ -107,6 +106,8 @@ main
 		justify-content: center
 		align-items: center
 		background: color-rgba(#f2a513,.8)
+		border-bottom: 1px solid #bc8626
+		border-top-left-radius: 5px
 	li
 		display: flex
 		align-items: center
@@ -131,5 +132,10 @@ main
 			flex-basis: 0
 			flex-grow: 1
 			max-width: 100%
+		+ li
+			border-top: 1px solid #bc8626
+		&:last-child
+			border-bottom-left-radius: 5px
+			overflow: hidden
 		&:hover
 			margin-left: -150px

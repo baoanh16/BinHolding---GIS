@@ -85,8 +85,8 @@
 					content: ''
 					width: 20px
 					height: 20px
-					border: 1px solid map-get($mau, main)
 					transition: all .3s ease-out
+					border: 1px solid #e3e3e3
 			input:checked
 				~ label:before
 					content: '\f12c'
@@ -96,6 +96,7 @@
 					justify-content: center
 					align-items: center
 					color: map-get($mau, main)
+					border: 1px solid map-get($mau, main)
 	.payment-method
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1)
 		border-top: 3px solid map-get($mau, main)
@@ -120,6 +121,8 @@
 				border: 1px solid #e1e1e1
 				padding: 30px
 				height: 100%
+				&.active
+					border: 1px solid map-get($mau, main)
 				label
 					text-align: center
 					width: 100%

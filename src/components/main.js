@@ -376,4 +376,17 @@ $(document).ready(function () {
 			$(target).fadeIn()
 		})
 	})
+
+
+	// Payment
+	$(".payment-method .method-list input").each(function () {
+		$(this).on("click", function () {
+			$(".payment-method .method-list input").removeAttr("checked")
+			$(".payment-method .method-wrappepr").removeClass('active')
+			$(this).attr("checked", "checked")
+			if ($(this).attr("checked") === "checked") {
+				$(this).parents(".method-wrapper").addClass("active")
+			}
+		})
+	})
 });
