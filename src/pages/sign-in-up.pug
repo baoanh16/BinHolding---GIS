@@ -33,35 +33,58 @@ block main
 				.col-lg-8
 					.sign-in-wrapper
 						h3 Register
-						form.row
+						form#form-signup.row(action='/account/signup', method='post', novalidate='novalidate')
 							.form-group.col-md-6
 								label First name
-								input(type="text")
+								input#sfirstname(type='text', name='sfirstname')
 							.form-group.col-md-6
 								label last Name
-								input(type="text")
+								input#slastname(type='text', name='slastname')
 							.form-group.col-md-6
 								label Email *
-								input(type="text")
+								input#semail.valid(type='text', name='semail', aria-invalid='false')
+								label#semail-error.error(for="semail") Please input email
 							.form-group.form-phone.col-md-6
 								label Phone
-								select
-									option(value="") +84
-									option(value="") +84
-									option(value="") +84
-									option(value="") +84
-								input(type="text")
+								.intl-tel-input.allow-dropdown.separate-dial-code
+									.flag-container
+										.selected-flag(role='combobox', aria-owns='country-listbox', tabindex='0', title='United States: +1')
+											.iti-flag.us
+											.selected-dial-code +1
+											.iti-arrow
+										ul#country-listbox.country-list.hide(aria-expanded='false', role='listbox', aria-activedescendant='iti-item-us')
+											li#iti-item-us.country.preferred.active(tabindex='-1', role='option', data-dial-code='1', data-country-code='us', aria-selected='true')
+												.flag-box
+													.iti-flag.us
+												span.country-name United States
+												span.dial-code +1
+											li#iti-item-zm.country.standard(tabindex='-1', role='option', data-dial-code='260', data-country-code='zm')
+												.flag-box
+													.iti-flag.zm
+												span.country-name Zambia
+												span.dial-code +260
+											li#iti-item-zw.country.standard(tabindex='-1', role='option', data-dial-code='263', data-country-code='zw')
+												.flag-box
+													.iti-flag.zw
+												span.country-name Zimbabwe
+												span.dial-code +263
+											li#iti-item-ax.country.standard(tabindex='-1', role='option', data-dial-code='358', data-country-code='ax')
+												.flag-box
+													.iti-flag.ax
+												span.country-name Åland Islands
+												span.dial-code +358
+									input#sphone(type='text', name='sphone', autocomplete='off', data-intl-tel-input-id='0', style='padding-left: 106px;', placeholder='201-555-0123')
+									input(type='hidden', name='full_phone')
 							.form-group.col-md-6
 								label Password *
-								input(type="password")
-								span.error password không khớp
+								input#spasswd.valid(type='password', name='spasswd', aria-invalid='false')
 							.form-group.col-md-6
 								label Confirm Password *
-								input(type="password")
-								span.error asdasdasd
+								input#sconfirm(type='password', name='sconfirm')
 							.form-group.form-check.col-12
-								input#subscribe(type="checkbox", name="")
-								label(for="subscribe") I have read and agree to these 
-									a(href="#") Terms and Conditons
+								input#terms(type='checkbox', name='terms')
+								label(for='terms')
+									| I have read and agree to these 
+									a(href='#') Terms and Conditons
 							.form-button.col-12
-								button.btn-sign Register
+								button#btnRegister.btn-sign(type='submit', disabled='disabled') Register

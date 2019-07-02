@@ -78,7 +78,19 @@ section.payment
 						.col-sm-6
 							.form-group
 								label Cart Type *
-								img(src="./img/payment/type_visa.png", alt="")
+								.radio
+									.form-radio
+										input#card_1(type="radio" name="card" checked)
+										label(for="card_1")
+											img(src="./img/payment/visa.jpg", alt="")
+									.form-radio
+										input#card_2(type="radio" name="card")
+										label(for="card_2")
+											img(src="./img/payment/mastercard.jpg", alt="")
+									.form-radio
+										input#card_3(type="radio" name="card")
+										label(for="card_3")
+											img(src="./img/payment/card3.jpg", alt="")
 						.col-sm-6
 							.form-group
 								label Expired Date *

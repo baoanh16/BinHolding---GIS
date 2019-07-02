@@ -54,3 +54,42 @@
 					color: white
 			.btn-viewmore
 				opacity: 1
+
+
+
+
+.fancybox-overview
+	max-width: 1240px
+	max-height: 100%
+	@media (max-width: 1024.98px)
+		padding: 44px 15px
+	.imgbox
+		text-align: center
+		margin-bottom: 20px
+		img
+			max-width: 300px
+	.content
+		h4
+			font-size: 24px
+			text-align: center
+			color: map-get($mau, main)
+			margin-bottom: 8px
+		p,ul
+			font-size: 15px
+			margin-bottom: 16px
+		ul
+			list-style-type: none
+			padding-left: 0
+			li
+				margin-bottom: 5px
+				position: relative
+				padding-left: 20px
+				&:before
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					background: #c1c1c1
+					top: 6px
+					position: absolute
+					left: 0
+					content: ''

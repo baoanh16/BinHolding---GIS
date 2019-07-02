@@ -68,6 +68,28 @@
 			padding: 14px 20px
 			&:focus
 				outline: none
+		.radio
+			display: flex
+			height: 50px
+			align-items: center
+			.form-radio
+				margin-right: 20px
+				@media (max-width: 1199.98px)
+					margin-right: 10px
+				label
+					max-width: 60px
+					flex-basis: 0
+					flex-grow: 1
+					height: 40px
+					border: 1px solid #e1e1e1
+					border-radius: 5px
+					overflow: hidden
+					margin-bottom: 0
+					cursor: pointer
+				input
+					display: none
+					&:checked ~ label
+						border: 1px solid map-get($mau, main)
 		.option
 			flex: 0 0 100%
 			max-width: 100%

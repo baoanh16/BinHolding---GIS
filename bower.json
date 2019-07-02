@@ -1,25 +1,27 @@
 {
-	"name": "source-v3",
-	"description": "source build html",
-	"main": "gulpfile.js",
-	"authors": [
-		"sonvh2510"
-	],
-	"license": "MIT",
-	"homepage": "https://github.com/sonvh2510/BinHolding---GIS.git",
-	"private": false,
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"dependencies": {
-		"swiper": "4.4.6",
-		"jquery": "3.3.1",
-		"font-awesome": "5.7.2",
-		"mdi": "3.5.94",
-		"linearicons": "1.0.1"
-	}
+  "name": "source-v3",
+  "description": "source build html",
+  "main": "gulpfile.js",
+  "authors": [
+    "sonvh2510"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sonvh2510/BinHolding---GIS.git",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swiper": "4.4.6",
+    "jquery": "3.3.1",
+    "font-awesome": "5.7.2",
+    "mdi": "3.5.94",
+    "linearicons": "1.0.1",
+    "bootstrap-datepicker": "^1.9.0",
+    "fancybox": "^3.5.7"
+  }
 }

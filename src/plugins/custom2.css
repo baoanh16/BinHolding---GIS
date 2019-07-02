@@ -1,0 +1,79 @@
+.login-wraper .login-window {
+    margin-left: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-wraper .login-window .l-head {
+    background-color: #ffffff;
+    padding: 40px;
+    border-bottom: solid 1px #eceff0;
+    font-weight: 500;
+    font-size: 22px;
+    color: #343434;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.login-wraper .login-window .l-form {
+    text-align: left;
+    background-color: #fbfdfe;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 25px 70px 70px;
+}
+
+.login-wraper .ortext {
+    padding-top: 5px;
+    color: #7e7e7e;
+}
+
+.login-wraper .signuptext {
+    padding-top: 5px;
+    text-align: center;
+    color: #343434;
+    font-weight: 500;
+}
+
+.login-wraper .btn-success {
+    color: #333;
+}
+
+.login-wraper .btn-success:hover {
+    color: #fff;
+    background-color: #398439;
+    /*border-color: #255625;*/
+}
+
+.iti-flag {background-image: url("/public/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti-flag {background-image: url("/public/img/flags@2x.png");}
+}
+
+.intl-tel-input {
+    width: 100%;
+}
+
+.intl-tel-input .selected-flag {
+    background: #e1e1e1 !important;
+    border-radius: 5px 0 0 5px;
+    padding-left: 20px !important;
+    width: 100px !important;
+    outline: none !important;
+}
+
+.intl-tel-input.allow-dropdown input {
+    padding-left: 124px !important;
+}
+
+.contact .form-group.form-phone input {
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+}
+
+.navbar-bottom-list .active a{
+    color: #ff9100;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}

@@ -12,7 +12,7 @@
 			a
 				padding: 0 10px
 				font-size: 14px
-				color: map-get($mau, main)
+				color: #333333
 				text-transform: uppercase
 				font-weight: 500
 				line-height: 40px
@@ -29,6 +29,8 @@
 				background: transparent
 				transition: all .3s ease-out
 			&:hover, &.active
+				a
+					color: map-get($mau, main)
 				&:after
 					background: map-get($mau, main)
 	@media (min-width: 1025px)

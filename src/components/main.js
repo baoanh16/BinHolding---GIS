@@ -248,6 +248,13 @@ $(document).ready(function () {
 	$('.tooltip-toggle').on('mouseleave', function () {
 		$(this).siblings('.tooltip').fadeOut()
 	})
+
+
+	function format(n, sep, decimals) {
+		sep = sep || "."; // Default to period as decimal separator
+		decimals = decimals || 0; // Default to 2 decimals
+		return n.toLocaleString().split(sep)[0];
+	}
 	$('.slider .ui-slider-custom').each(function () {
 		$(this).slider({
 			min: $(this).find('.min').attr('data-value'),
@@ -256,7 +263,7 @@ $(document).ready(function () {
 			value: 0, // default value of slider
 			slide: function (event, ui) {
 				let currentValue = Math.round(ui.value / 100) * 10
-				$(this).find(".ui-slider-handle").html('<span class="value" current-value="' + currentValue + '">' + currentValue + '</span>');
+				$(this).find(".ui-slider-handle").html('<span class="value" current-value="' + format(currentValue) + '">' + format(currentValue) + '</span>');
 			}
 		})
 	})
@@ -274,8 +281,6 @@ $(document).ready(function () {
 
 	var ResidenceImportantSlider = new Swiper('.important-2 .swiper-container', {
 		slidesPerView: 4,
-		loop: true,
-		loopAdditionalSlides: 1,
 		spaceBetween: 20,
 		breakpoints: {
 			1025: {
@@ -303,11 +308,11 @@ $(document).ready(function () {
 		$(this).find('.textbox').css({
 			height: "84px"
 		})
-		let itemHeight = $(this).height()
-		$(this).parents('.col-lg-6').css({
-			"padding-bottom": itemHeight,
-			"margin-bottom": 30,
-		})
+		// let itemHeight = $(this).height()
+		// $(this).parents('.col-lg-6').css({
+		// 	"padding-bottom": itemHeight,
+		// 	"margin-bottom": 30,
+		// })
 		$(this).find('.button-wrapper a').on('click', function () {
 			$(this).parents('.item').toggleClass('show')
 			if ($(this).parents('.item').hasClass('show')) {
@@ -380,13 +385,18 @@ $(document).ready(function () {
 
 	// Payment
 	$(".payment-method .method-list input").each(function () {
+		if ($(this).attr("checked") == "checked") {
+			$(this).parents(".method-wrapper").addClass("active")
+		}
 		$(this).on("click", function () {
 			$(".payment-method .method-list input").removeAttr("checked")
-			$(".payment-method .method-wrappepr").removeClass('active')
+			$(".payment-method .method-list .method-wrapper").removeClass('active')
 			$(this).attr("checked", "checked")
-			if ($(this).attr("checked") === "checked") {
+			if ($(this).attr("checked") == "checked") {
 				$(this).parents(".method-wrapper").addClass("active")
 			}
 		})
 	})
+
+	$(".datepicker").datepicker();
 });

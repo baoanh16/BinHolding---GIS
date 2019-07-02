@@ -10,11 +10,17 @@
 		"src/plugins/jquery-ui-1.12.1.custom/jquery-ui.min.js",
 		"src/plugins/lazysizes.min.js",
 		"src/plugins/mapping.js",
-		"src/plugins/mapping-listener.js"
+		"src/plugins/mapping-listener.js",
+		"bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js",
+		"bower_components/fancybox/dist/jquery.fancybox.js"
 	],
 	"globalCss": [
 		"src/plugins/font.css",
 		"src/plugins/grid.css",
-		"bower_components/swiper/dist/css/swiper.min.css"
+		"src/plugins/custom1.css",
+		"src/plugins/custom2.css",
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css"
 	]
 }

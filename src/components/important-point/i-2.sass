@@ -35,9 +35,10 @@
 			.swiper-next
 				left: unset
 				right: 0
-	.item
+	.swiper-slide
 		a
 			text-decoration: none
+	.item
 		.imgbox
 			overflow: hidden
 			img
@@ -47,11 +48,10 @@
 			padding-top: 15px
 		h4
 			margin-bottom: 12px
-			a
-				font-weight: 700
-				font-size: 16px
-				color: #333
-				transition: all .3s ease-out
+			font-weight: 700
+			font-size: 16px
+			color: #333
+			transition: all .3s ease-out
 		p
 			-webkit-line-clamp: 3
 			font-size: 14px
@@ -69,5 +69,5 @@
 						transform: scale(1.05)
 				figcaption
 					transition: all .3s ease-out
-					a
+					h4
 						color: map-get($mau, main)
